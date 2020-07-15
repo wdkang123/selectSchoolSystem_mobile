@@ -68,7 +68,7 @@
 
         <transition name="fade" mode :duraion="5000">
             <!-- 选择学校的模块 模块 -->
-            <div class="select_school_box" v-show="!switch_interesting" >
+            <div class="select_school_box" v-show="!switch_interesting" style="margin-bottom: 85px" >
                 <!--文字 -->
                 <div style="
                             width: 90vw;
@@ -330,10 +330,65 @@
                                 </div>
                             </div>
                         </div>
+
+                        <!-- 中间留一些缝隙 -->
+                        <div style="margin-top: 1vh"></div>
+
+                        <div class="form_line_box">
+                            <div style="
+                                width: 20vw;
+                                height: 5vh;
+                                float: left;
+                                color: #6c7277;
+                                font-size: 2vh;
+                                line-height: 5vh;">
+                                宗教信仰
+                            </div>
+                        </div>
+                        <div class="form_line_box">
+                            <div class="my_checkbox">
+                                <input type="checkbox" name="sex2" id="wuzongjiao">
+                                <label for="wuzongjiao">
+                                    无宗教
+                                </label>
+                                <div class="right_box">
+                                    √
+                                </div>
+                            </div>
+
+                            <div class="my_checkbox">
+                                <input type="checkbox" name="sex2" id="jidu">
+                                <label for="jidu">
+                                    基督教
+                                </label>
+                                <div class="right_box">
+                                    √
+                                </div>
+                            </div>
+                        </div>
                     </van-form>
                 </div>
+
+                <!-- 中间留一些缝隙 -->
+                <div style="margin-top: 1vh"></div>
+
+                <!-- 更多偏好 -->
+                <div style="width: 20vw;
+                height: 3vh;
+                color: lightgrey;
+                font-size: 15px;
+                line-height: 3vh; float: right;">
+                    更多偏好▼
+                </div>
+
+                <!-- 中间留一些缝隙 -->
+                <div style="margin-top: 5vh"></div>
+
+                <van-button type="warning">院校匹配</van-button>
+
             </div>
         </transition>
+
 
 
         <!-- 近期活动模块 -->
@@ -493,7 +548,7 @@
 
     .select_school_box{
         width: 95vw;
-        height: 90vh;
+        height: 98vh;
         position: absolute;
         top: 12vh;
         bottom: 0;
