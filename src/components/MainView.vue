@@ -377,7 +377,7 @@
                 height: 3vh;
                 color: lightgrey;
                 font-size: 15px;
-                line-height: 3vh; float: right;">
+                line-height: 3vh; float: right;" is-link @click="showPopup">
                     更多偏好▼
                 </div>
 
@@ -419,15 +419,71 @@
             </div>
         </div>
 
+
+        <!-- 登录窗口 -->
+        <van-popup v-model="show" round>
+            <div style="width: 85vw; height: 30vh;">
+                <div style="width: 85vw; height: 5vh; ">
+
+                </div>
+                <!-- title -->
+                <div style="width: 85vw;
+                height: 5vh;
+                font-weight: bold;
+                line-height: 5vh;
+                font-size: 2.5vh;
+                ">
+                    登录使用更多功能
+                </div>
+
+                <!-- button -->
+                <!-- 中间留一些缝隙 -->
+                <div style="margin-top: 3vh"></div>
+
+                <van-button v-on:click="UserLogin" style="width: 60vw" type="warning">
+                    现在登录
+                </van-button>
+
+                <!-- 中间留一些缝隙 -->
+                <div style="margin-top: 3vh"></div>
+
+                <!-- 体验 -->
+                <div style="width: 85vw; height: 5vh; line-height: 5vh; font-size: 2vh; color: #f8a362">
+                    体验初级偏好检索
+                </div>
+            </div>
+        </van-popup>
+
+        <van-popup v-model="login_ing">
+            <!-- 控制条 -->
+            <div style="
+            width: 100vw;
+            height: 5vh; font-size: 20px; line-height: 5vh;">
+                <div v-on:click="CloseLogin" style="margin-left: 5vw; color: black; font-weight: lighter; float: left">
+                    X
+                </div>
+                <div style="width: 90vw; font-size: 2vh;">
+                    登录
+                </div>
+            </div>
+            <UserLogin />
+        </van-popup>
     </div>
 </template>
 
 <script>
     import { Toast } from 'vant';
+    import UserLogin from "./UserLogin";
+
     export default {
         name: "MainView",
+        components: {
+            UserLogin
+        },
         data() {
             return {
+                show: false,
+                login_ing: false,
                 search_value: '',
                 last_activity_top: '80vh',
                 switch_interesting: true,
@@ -461,6 +517,16 @@
             onCancel() {
                 Toast('取消');
             },
+            showPopup() {
+                this.show = true;
+            },
+            UserLogin() {
+                this.show = false;
+                this.login_ing = true;
+            },
+            CloseLogin() {
+                this.login_ing = false;
+            }
         },
     }
 </script>
