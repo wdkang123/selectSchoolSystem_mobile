@@ -462,11 +462,7 @@
                 <div v-on:click="CloseLogin" style="margin-left: 5vw; color: black; font-weight: lighter; float: left">
                     X
                 </div>
-<<<<<<< HEAD
-                <div style="width: 90vw; font-size: 2vh; color: black">
-=======
                 <div style="width: 90vw; font-size: 2vh;">
->>>>>>> c5afc7aad049b2ad9b88f8aff65701e0c2948fee
                     登录
                 </div>
             </div>

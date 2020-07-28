@@ -1,7 +1,5 @@
 <template>
     <div class="login_box">
-
-<<<<<<< HEAD
         <!-- 输入账号密码的部分 -->
         <div class="input_box">
             <!-- 登录 -->
@@ -67,8 +65,7 @@
                 注册即代表您同意《用户协议》和《隐私保护手册》
             </div>
         </div>
-=======
->>>>>>> c5afc7aad049b2ad9b88f8aff65701e0c2948fee
+
     </div>
 </template>
 
@@ -82,7 +79,6 @@
     .login_box {
         width: 100vw;
         height: 95vh;
-<<<<<<< HEAD
         /*background-color: red;*/
     }
 
@@ -146,8 +142,6 @@
         right: 0;
         margin-left: auto;
         margin-right: auto;
-=======
         background-color: red;
->>>>>>> c5afc7aad049b2ad9b88f8aff65701e0c2948fee
     }
 </style>
