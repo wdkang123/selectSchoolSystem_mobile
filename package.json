@@ -11,6 +11,7 @@
     "animate.css": "^4.1.0",
     "axios": "^0.19.2",
     "core-js": "^3.6.5",
+<<<<<<< HEAD
     "vant": "^2.9.2",
     "vue": "^2.6.11",
     "vue-router": "^3.3.4",
@@ -20,6 +21,16 @@
     "@vue/cli-plugin-babel": "^4.4.6",
     "@vue/cli-plugin-eslint": "^4.4.6",
     "@vue/cli-service": "^4.4.6",
+=======
+    "vant": "^2.8.2",
+    "vue": "^2.6.11",
+    "vue-router": "^3.2.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.4.0",
+    "@vue/cli-plugin-eslint": "~4.4.0",
+    "@vue/cli-service": "~4.4.0",
+>>>>>>> c5afc7aad049b2ad9b88f8aff65701e0c2948fee
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",

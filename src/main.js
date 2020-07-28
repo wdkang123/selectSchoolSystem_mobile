@@ -1,5 +1,8 @@
 import Vue from 'vue'
+<<<<<<< HEAD
 import Vuex from 'vuex'
+=======
+>>>>>>> c5afc7aad049b2ad9b88f8aff65701e0c2948fee
 import App from './App.vue'
 import router from './router.js'
 import Vant from 'vant';
@@ -11,6 +14,7 @@ Vue.config.productionTip = false;
 Vue.use(Vant);
 Vue.use(request);
 Vue.use(animated);
+<<<<<<< HEAD
 Vue.use(Vuex);
 
 const store = new Vuex.Store({
@@ -28,4 +32,9 @@ new Vue({
   render: h => h(App),
   router,
   store
+=======
+new Vue({
+  render: h => h(App),
+  router,
+>>>>>>> c5afc7aad049b2ad9b88f8aff65701e0c2948fee
 }).$mount('#app')
