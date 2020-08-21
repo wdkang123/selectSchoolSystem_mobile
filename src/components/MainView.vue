@@ -94,14 +94,26 @@
                                 height: 5vh;
                                 float: left;
                                 color: #6c7277;
-                                font-size: 2vh;
+                                font-size: 4vw;
                                 line-height: 5vh;">  
                                 学校排名
                             </div>
+
                             <div style="width: 1vw; height: 5vh; margin-left: 25vw; float: left"></div>
-                            <van-field class="input_box" v-model="rank_left" />
-                            <div style="width: 5vw; height: 30px; height: 5vh; float: left"></div>
-                            <van-field class="input_box" v-model="rank_right" />
+
+                            <!-- 左边的input -->
+                            <div style="width: 20vw; height: 2.5vh; float: left;">
+                                <input type="text" class="select_school_input" />
+                            </div>
+
+                            <!-- 一条灰色的线 -->
+                            <div style="width: 5vw; height: 1px; margin-top: 2.2vh; border-top: 1px solid lightgrey; float: left">
+
+                            </div>
+                            <!-- 右边的input -->
+                            <div style="width: 20vw; height: 2.5vh; float: left;">
+                                <input type="text" class="select_school_input" />
+                            </div>
                         </div>
                         <!-- 中间留一些缝隙 -->
                         <div style="margin-top: 2vh"></div>
@@ -111,14 +123,26 @@
                                 height: 5vh;
                                 float: left;
                                 color: #6c7277;
-                                font-size: 2vh;
+                                font-size: 4vw;
                                 line-height: 5vh;">  
                                 全年学费
                             </div>
+
                             <div style="width: 1vw; height: 5vh; margin-left: 25vw; float: left"></div>
-                            <van-field class="input_box" v-model="rank_left" />
-                            <div style="width: 5vw; height: 30px; height: 5vh; float: left"></div>
-                            <van-field class="input_box" v-model="rank_right" />
+
+                            <!-- 左边的input -->
+                            <div style="width: 20vw; height: 2.5vh; float: left;">
+                                <input type="text" class="select_school_input" />
+                            </div>
+
+                            <!-- 一条灰色的线 -->
+                            <div style="width: 5vw; height: 1px; margin-top: 2.2vh; border-top: 1px solid lightgrey; float: left">
+
+                            </div>
+                            <!-- 右边的input -->
+                            <div style="width: 20vw; height: 2.5vh; float: left;">
+                                <input type="text" class="select_school_input" />
+                            </div>
                         </div>
                         <!-- 中间留一些缝隙 -->
                         <div style="margin-top: 2vh"></div>
@@ -128,14 +152,26 @@
                                 height: 5vh;
                                 float: left;
                                 color: #6c7277;
-                                font-size: 2vh;
+                                font-size: 4vw;
                                 line-height: 5vh;">  
                                 TOFEL
                             </div>
+
                             <div style="width: 1vw; height: 5vh; margin-left: 25vw; float: left"></div>
-                            <van-field class="input_box" v-model="rank_left" />
-                            <div style="width: 5vw; height: 30px; height: 5vh; float: left"></div>
-                            <van-field class="input_box" v-model="rank_right" />
+
+                            <!-- 左边的input -->
+                            <div style="width: 20vw; height: 2.5vh; float: left;">
+                                <input type="text" class="select_school_input" />
+                            </div>
+
+                            <!-- 一条灰色的线 -->
+                            <div style="width: 5vw; height: 1px; margin-top: 2.2vh; border-top: 1px solid lightgrey; float: left">
+
+                            </div>
+                            <!-- 右边的input -->
+                            <div style="width: 20vw; height: 2.5vh; float: left;">
+                                <input type="text" class="select_school_input" />
+                            </div>
                         </div>
 
                         <!-- 中间留一些缝隙 -->
@@ -146,19 +182,32 @@
                                 height: 5vh;
                                 float: left;
                                 color: #6c7277;
-                                font-size: 2vh;
+                                font-size: 4vw;
                                 line-height: 5vh;">
                                 SSAT
                             </div>
+
                             <div style="width: 1vw; height: 5vh; margin-left: 25vw; float: left"></div>
-                            <van-field class="input_box" v-model="rank_left" />
-                            <div style="width: 5vw; height: 30px; height: 5vh; float: left"></div>
-                            <van-field class="input_box" v-model="rank_right" />
+
+                            <!-- 左边的input -->
+                            <div style="width: 20vw; height: 2.5vh; float: left;">
+                                <input type="text" class="select_school_input" />
+                            </div>
+
+                            <!-- 一条灰色的线 -->
+                            <div style="width: 5vw; height: 1px; margin-top: 2.2vh; border-top: 1px solid lightgrey; float: left">
+
+                            </div>
+                            <!-- 右边的input -->
+                            <div style="width: 20vw; height: 2.5vh; float: left;">
+                                <input type="text" class="select_school_input" />
+                            </div>
                         </div>
 
                         <!-- 中间留一些缝隙 -->
                         <div style="margin-top: 1vh"></div>
-                        
+
+
                         <div class="form_line_box">
                             <div style="
                                 width: 20vw;
@@ -639,13 +688,25 @@
     }
     .input_box {
         width: 20vw; 
-        height: 5vh;
+        height: 4vh;
         border-radius: 5px; 
         border: 1px solid lightgray;
         text-align: center;
         float: left;
     }
 
+    .select_school_input {
+        width: 20vw;
+        position: relative;
+        height: 2.5vh;
+        margin-top: 1vh;
+        opacity: 100%;
+        border-radius: 5px;
+        float: left;
+        font-size: 2vw;
+        text-align: center;
+        border: 1px solid lightgray
+    }
 
 
     .van-cell{

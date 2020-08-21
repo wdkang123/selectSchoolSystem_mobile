@@ -117,6 +117,7 @@
         margin-right: auto;
         margin-top: 75vh;
     }
+
     .bottom_login_box{
         width: 70vw;
         height: 10vh;
@@ -142,6 +143,5 @@
         right: 0;
         margin-left: auto;
         margin-right: auto;
-        background-color: red;
     }
 </style>
