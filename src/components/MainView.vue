@@ -43,7 +43,36 @@
                         您可能感兴趣的院校
                     </span>
                 </div>
-                <!-- 图片框 -->
+
+                <!-- 轮播 -->
+                <van-swipe class="my-swipe"
+                           loop="false"
+                           :width="swipe_width"
+                           style="height: 105vw"
+                           indicator-color="white">
+                    <van-swipe-item>
+                        <div class="interesting_img_box">
+                            <img class="interesting_img" src="../assets/img/interesting_school_1.png" />
+                        </div>
+                    </van-swipe-item>
+                    <van-swipe-item>
+                        <div class="interesting_img_box">
+                            <img class="interesting_img" src="../assets/img/interesting_school_1.png" />
+                        </div>
+                    </van-swipe-item>
+                    <van-swipe-item>
+                        <div class="interesting_img_box">
+                            <img class="interesting_img" src="../assets/img/interesting_school_1.png" />
+                        </div>
+                    </van-swipe-item>
+                    <van-swipe-item>
+                        <div class="interesting_img_box">
+                            <img class="interesting_img" src="../assets/img/interesting_school_1.png" />
+                        </div>
+                    </van-swipe-item>
+                </van-swipe>
+
+                <!--
                 <div style="width: 95vw;
                             height: 58vh;
                             margin-top: 5px;
@@ -63,6 +92,7 @@
                         </div>
                     </div>
                 </div>
+                -->
             </div>
         </transition>
 
@@ -89,13 +119,7 @@
                 <div>
                     <van-form @submit="onSubmit" class="select_form_box">
                         <div class="form_line_box">
-                            <div style="
-                                width: 20vw;
-                                height: 5vh;
-                                float: left;
-                                color: #6c7277;
-                                font-size: 4vw;
-                                line-height: 5vh;">  
+                            <div class="select_school_lable">
                                 学校排名
                             </div>
 
@@ -115,16 +139,9 @@
                                 <input type="text" class="select_school_input" />
                             </div>
                         </div>
-                        <!-- 中间留一些缝隙 -->
-                        <div style="margin-top: 2vh"></div>
+
                         <div class="form_line_box">
-                            <div style="
-                                width: 20vw;
-                                height: 5vh;
-                                float: left;
-                                color: #6c7277;
-                                font-size: 4vw;
-                                line-height: 5vh;">  
+                            <div class="select_school_lable">
                                 全年学费
                             </div>
 
@@ -144,16 +161,9 @@
                                 <input type="text" class="select_school_input" />
                             </div>
                         </div>
-                        <!-- 中间留一些缝隙 -->
-                        <div style="margin-top: 2vh"></div>
+
                         <div class="form_line_box">
-                            <div style="
-                                width: 20vw;
-                                height: 5vh;
-                                float: left;
-                                color: #6c7277;
-                                font-size: 4vw;
-                                line-height: 5vh;">  
+                            <div class="select_school_lable">
                                 TOFEL
                             </div>
 
@@ -174,16 +184,8 @@
                             </div>
                         </div>
 
-                        <!-- 中间留一些缝隙 -->
-                        <div style="margin-top: 2vh"></div>
                         <div class="form_line_box">
-                            <div style="
-                                width: 20vw;
-                                height: 5vh;
-                                float: left;
-                                color: #6c7277;
-                                font-size: 4vw;
-                                line-height: 5vh;">
+                            <div class="select_school_lable">
                                 SSAT
                             </div>
 
@@ -204,18 +206,8 @@
                             </div>
                         </div>
 
-                        <!-- 中间留一些缝隙 -->
-                        <div style="margin-top: 1vh"></div>
-
-
                         <div class="form_line_box">
-                            <div style="
-                                width: 20vw;
-                                height: 5vh;
-                                float: left;
-                                color: #6c7277;
-                                font-size: 2vh;
-                                line-height: 5vh;">
+                            <div class="select_school_lable">
                                 学校类型
                             </div>
                         </div>
@@ -251,17 +243,8 @@
                             </div>
                         </div>
 
-                        <!-- 中间留一些缝隙 -->
-                        <div style="margin-top: 1vh"></div>
-
                         <div class="form_line_box">
-                            <div style="
-                                width: 20vw;
-                                height: 5vh;
-                                float: left;
-                                color: #6c7277;
-                                font-size: 2vh;
-                                line-height: 5vh;">
+                            <div class="select_school_lable">
                                 地理位置
                             </div>
                         </div>
@@ -297,18 +280,8 @@
                             </div>
                         </div>
 
-
-                        <!-- 中间留一些缝隙 -->
-                        <div style="margin-top: 1vh"></div>
-
                         <div class="form_line_box">
-                            <div style="
-                                width: 20vw;
-                                height: 5vh;
-                                float: left;
-                                color: #6c7277;
-                                font-size: 2vh;
-                                line-height: 5vh;">
+                            <div class="select_school_lable">
                                 附近环境
                             </div>
                         </div>
@@ -334,17 +307,8 @@
                             </div>
                         </div>
 
-                        <!-- 中间留一些缝隙 -->
-                        <div style="margin-top: 1vh"></div>
-
                         <div class="form_line_box">
-                            <div style="
-                                width: 20vw;
-                                height: 5vh;
-                                float: left;
-                                color: #6c7277;
-                                font-size: 2vh;
-                                line-height: 5vh;">
+                            <div class="select_school_lable">
                                 开设年级
                             </div>
                         </div>
@@ -380,17 +344,8 @@
                             </div>
                         </div>
 
-                        <!-- 中间留一些缝隙 -->
-                        <div style="margin-top: 1vh"></div>
-
                         <div class="form_line_box">
-                            <div style="
-                                width: 20vw;
-                                height: 5vh;
-                                float: left;
-                                color: #6c7277;
-                                font-size: 2vh;
-                                line-height: 5vh;">
+                            <div class="select_school_lable">
                                 宗教信仰
                             </div>
                         </div>
@@ -417,9 +372,6 @@
                         </div>
                     </van-form>
                 </div>
-
-                <!-- 中间留一些缝隙 -->
-                <div style="margin-top: 1vh"></div>
 
                 <!-- 更多偏好 -->
                 <div style="width: 20vw;
@@ -529,12 +481,20 @@
         components: {
             UserLogin
         },
+        mounted () {
+            let orderWidth = document.documentElement.clientWidth;
+            // window.console.log(orderWidth);
+            this.swipe_width = orderWidth / 414 * 300;
+        },
         data() {
             return {
                 show: false,
                 login_ing: false,
                 search_value: '',
-                last_activity_top: '80vh',
+
+                //轮播宽度
+                swipe_width: 300,
+                last_activity_top: '155vw',
                 switch_interesting: true,
                 rank_left: 1,
                 rank_right: 80,
@@ -606,9 +566,17 @@
         position: absolute;
         top: 4vh;
     }
+
+    .my-swipe .van-swipe-item {
+        color: #fff;
+        font-size: 20px;
+        line-height: 150px;
+        text-align: center;
+    }
+
     .interesting_box{
         width: 95vw;
-        height: 65vh;
+        height: 125vw;
         position: absolute;
         top: 12vh;
         bottom: 0;
@@ -622,12 +590,12 @@
     }
     .interesting_img_box{
         width: 80vw;
-        height: 58vh;
+        height: auto;
         float: left
     }
     .interesting_img{
         width: 70vw;
-        height: 55vh;
+        height: auto;
     }
     .last_activity_box{
         width: 95vw;
@@ -663,7 +631,7 @@
 
     .select_school_box{
         width: 95vw;
-        height: 98vh;
+        height: 95vh;
         position: absolute;
         top: 12vh;
         bottom: 0;
@@ -677,7 +645,7 @@
     }
     .select_form_box{
         width: 100%;
-        height: 80vh;
+        height: 72vh;
         text-align: center;
     }
     .form_line_box{
@@ -708,6 +676,14 @@
         border: 1px solid lightgray
     }
 
+    .select_school_lable {
+        width: 20vw;
+        height: 5vh;
+        float: left;
+        color: #6c7277;
+        font-size: 4vw;
+        line-height: 5vh;
+    }
 
     .van-cell{
         padding: 2vw 2vw;
@@ -740,13 +716,13 @@
         width: 20vw;
         height: 4vh;
         display:block;
-        font-size: 2vh;
+        font-size: 2vw;
     }
 
     .my_checkbox {
         width: 20vw;
-        height: 4vh;
-        line-height: 4vh;
+        height: 3.5vh;
+        line-height: 3.5vh;
         text-align: center;
         border: 1px solid orange;
         background-color: white;
@@ -754,6 +730,7 @@
         -moz-user-select: none;
         position: relative;
         margin-left: 10px;
+        font-weight: bold;
         float: left;
     }
 
