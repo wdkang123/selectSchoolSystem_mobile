@@ -1,12 +1,12 @@
 <template>
   <div>
-    <MainView />
+    <router-view />
     <!-- 切换条 -->
     <div class="bottom_box">
       <van-tabbar class="bottom_box" v-model="active" active-color="#f8a362" inactive-color="#000">
-        <van-tabbar-item icon="home-o">首页</van-tabbar-item>
-        <van-tabbar-item icon="search">心仪学校</van-tabbar-item>
-        <van-tabbar-item icon="friends-o">我的</van-tabbar-item>
+        <van-tabbar-item v-on:click="toMainPage" icon="home-o">首页</van-tabbar-item>
+        <van-tabbar-item v-on:click="toSchoolPage" icon="search">心仪学校</van-tabbar-item>
+        <van-tabbar-item v-on:click="toMyPage" icon="friends-o">我的</van-tabbar-item>
       </van-tabbar>
     </div>
   </div>
@@ -14,17 +14,30 @@
 
 <script>
 
-import MainView from "./MainView";
 
 export default {
   name: 'IndexPage',
-  components: {MainView},
+  components: {},
   props: {
     
+  },
+  created() {
+    this.$router.replace('MainView');
   },
   data() {
     return {
       active: 0,
+    }
+  },
+  methods: {
+    toMainPage () {
+      this.$router.replace('MainView');
+    },
+    toSchoolPage () {
+      this.$router.replace('MainView');
+    },
+    toMyPage() {
+      this.$router.replace('MyView');
     }
   }
 }
