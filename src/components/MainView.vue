@@ -46,7 +46,7 @@
 
                 <!-- 轮播 -->
                 <van-swipe class="my-swipe"
-                           loop="false"
+                           :loop="false"
                            :width="swipe_width"
                            style="height: 105vw"
                            indicator-color="white">
@@ -71,28 +71,6 @@
                         </div>
                     </van-swipe-item>
                 </van-swipe>
-
-                <!--
-                <div style="width: 95vw;
-                            height: 58vh;
-                            margin-top: 5px;
-                            overflow: scroll">
-                    <div style="width: 240vw;
-                                height: 58vh;
-                                overflow: scroll;
-                                ">
-                        <div class="interesting_img_box">
-                            <img class="interesting_img" src="../assets/img/interesting_school_1.png" />
-                        </div>
-                        <div class="interesting_img_box">
-                            <img class="interesting_img" src="../assets/img/interesting_school_1.png" />
-                        </div>
-                        <div class="interesting_img_box">
-                            <img class="interesting_img" src="../assets/img/interesting_school_1.png" />
-                        </div>
-                    </div>
-                </div>
-                -->
             </div>
         </transition>
 
@@ -127,7 +105,7 @@
 
                             <!-- 左边的input -->
                             <div style="width: 20vw; height: 2.5vh; float: left;">
-                                <input type="text" class="select_school_input" />
+                                <input type="text" v-model="rank_left" class="select_school_input" />
                             </div>
 
                             <!-- 一条灰色的线 -->
@@ -136,7 +114,7 @@
                             </div>
                             <!-- 右边的input -->
                             <div style="width: 20vw; height: 2.5vh; float: left;">
-                                <input type="text" class="select_school_input" />
+                                <input type="text" v-model="rank_right" class="select_school_input" />
                             </div>
                         </div>
 
@@ -149,7 +127,7 @@
 
                             <!-- 左边的input -->
                             <div style="width: 20vw; height: 2.5vh; float: left;">
-                                <input type="text" class="select_school_input" />
+                                <input type="text" v-model="cost_left" class="select_school_input" />
                             </div>
 
                             <!-- 一条灰色的线 -->
@@ -158,7 +136,7 @@
                             </div>
                             <!-- 右边的input -->
                             <div style="width: 20vw; height: 2.5vh; float: left;">
-                                <input type="text" class="select_school_input" />
+                                <input type="text" v-model="cost_right" class="select_school_input" />
                             </div>
                         </div>
 
@@ -171,7 +149,7 @@
 
                             <!-- 左边的input -->
                             <div style="width: 20vw; height: 2.5vh; float: left;">
-                                <input type="text" class="select_school_input" />
+                                <input type="text" v-model="tofel_left" class="select_school_input" />
                             </div>
 
                             <!-- 一条灰色的线 -->
@@ -180,7 +158,7 @@
                             </div>
                             <!-- 右边的input -->
                             <div style="width: 20vw; height: 2.5vh; float: left;">
-                                <input type="text" class="select_school_input" />
+                                <input type="text" v-model="tofel_right" class="select_school_input" />
                             </div>
                         </div>
 
@@ -193,7 +171,7 @@
 
                             <!-- 左边的input -->
                             <div style="width: 20vw; height: 2.5vh; float: left;">
-                                <input type="text" class="select_school_input" />
+                                <input type="text" v-model="ssat_left" class="select_school_input" />
                             </div>
 
                             <!-- 一条灰色的线 -->
@@ -202,7 +180,7 @@
                             </div>
                             <!-- 右边的input -->
                             <div style="width: 20vw; height: 2.5vh; float: left;">
-                                <input type="text" class="select_school_input" />
+                                <input type="text" v-model="ssat_right" class="select_school_input" />
                             </div>
                         </div>
 
@@ -511,10 +489,8 @@
             switchPanel() {
                 if (this.switch_interesting) {
                     this.switch_interesting = false;
-                    this.last_activity_top = '105vh';
                 } else {
                     this.switch_interesting = true;
-                    this.last_activity_top = '80vh';
                 }
             },
             onSubmit() {
