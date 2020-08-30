@@ -34,7 +34,7 @@ export default {
       this.$router.replace('MainView');
     },
     toSchoolPage () {
-      this.$router.replace('MainView');
+      this.$router.replace('SchoolView');
     },
     toMyPage() {
       this.$router.replace('MyView');
