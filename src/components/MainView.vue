@@ -27,8 +27,8 @@
 
         <transition name="fade" mode :duraion="5000">
             <!-- 可能感兴趣的院校 模块 -->
+            <!--文字 -->
             <div class="interesting_box" v-show="switch_interesting">
-                <!--文字 -->
                 <div style="
                             width: 90vw;
                             height: 10vw;
@@ -39,6 +39,7 @@
                             margin-left: 10px;
                             margin-top: 5px;
                             text-align: left;">
+
                     <span class=" animate__fadeIn">
                         您可能感兴趣的院校
                     </span>
@@ -76,7 +77,7 @@
 
         <transition name="fade" mode :duraion="5000">
             <!-- 选择学校的模块 模块 -->
-            <div class="select_school_box" v-show="!switch_interesting" style="margin-bottom: 85px" >
+            <div class="select_school_box" v-show="switch_select_box" style="margin-bottom: 85px" >
                 <!--文字 -->
                 <div style="
                             width: 90vw;
@@ -363,11 +364,18 @@
                 <!-- 中间留一些缝隙 -->
                 <div style="margin-top: 5vh"></div>
 
-                <van-button type="warning">院校匹配</van-button>
+                <van-button v-on:click="selectSchools()" type="warning">
+                    院校匹配
+                </van-button>
 
             </div>
         </transition>
 
+        <!-- 匹配到的院校 -->
+        <div class="match_scool" v-show="match_box">
+            <SchoolList v-bind:school_list="match_school_box" />
+
+        </div>
 
 
         <!-- 近期活动模块 -->
@@ -453,11 +461,13 @@
 <script>
     import { Toast } from 'vant';
     import UserLogin from "./UserLogin";
+    import SchoolList from "./SchoolList";
 
     export default {
         name: "MainView",
         components: {
-            UserLogin
+            UserLogin,
+            SchoolList
         },
         mounted () {
             let orderWidth = document.documentElement.clientWidth;
@@ -474,6 +484,7 @@
                 swipe_width: 300,
                 last_activity_top: '155vw',
                 switch_interesting: true,
+                switch_select_box: false,
                 rank_left: 1,
                 rank_right: 80,
                 cost_left: 15000,
@@ -483,15 +494,33 @@
                 ssat_left: 0.75,
                 ssat_right: 1.0,
                 school_type_group: [],
+                //匹配到的学校的列表
+                match_box: false,
+                match_school_box: "",
             };
         },
         methods: {
             switchPanel() {
                 if (this.switch_interesting) {
                     this.switch_interesting = false;
+                    this.switch_select_box = true;
                 } else {
                     this.switch_interesting = true;
+                    this.switch_select_box = false;
                 }
+                this.match_box = false;
+            },
+            selectSchools() {
+                this.$get('/school/getAllSchool', {
+
+                }).then(res => {
+                    //window.console.log(res.data);
+                    //接收到消息之后 返回的数据
+                    this.match_box = true;
+                    this.switch_select_box = false;
+                    this.match_school_box = res.data;
+                    window.console.log(this.match_school_box);
+                });
             },
             onSubmit() {
                 
@@ -730,5 +759,9 @@
 
     input[type="checkbox"]:checked + label {
         color: black;
+    }
+
+    .match_scool{
+
     }
 </style>

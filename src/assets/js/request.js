@@ -2,7 +2,7 @@ import axios from 'axios'
 import qs from 'qs'
 
 let service = axios.create({
-    baseURL:"",
+    baseURL:"http://localhost:8085",
     //baseURL:"http://172.17.0.177:8082",
     timeout:10000,
     headers:{
