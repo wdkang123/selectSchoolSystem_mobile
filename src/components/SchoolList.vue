@@ -78,7 +78,6 @@
         right: 0;
         margin-left: auto;
         margin-right: auto;
-
     }
     .school_item{
         width: 95vw;
@@ -88,7 +87,6 @@
         box-shadow: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04);
         overflow: hidden;
     }
-
     .item_img{
         width: 95vw;
         height: 40vw;
@@ -109,7 +107,6 @@
         margin-right: auto;
         z-index: 0;
     }
-
     .item_left_box{
         width: 5vw;
         height: 10vw;
