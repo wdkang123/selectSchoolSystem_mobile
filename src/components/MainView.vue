@@ -511,8 +511,25 @@
                 this.match_box = false;
             },
             selectSchools() {
-                this.$get('/school/getAllSchool', {
-
+                /*
+                rank_left: 1,
+                rank_right: 80,
+                cost_left: 15000,
+                cost_right: 70000,
+                tofel_left: 80,
+                tofel_right: 120,
+                ssat_left: 0.75,
+                ssat_right: 1.0,
+                 */
+                let rank = this.rank_left + "-" + this.rank_right;
+                let cost = this.cost_left + "-" + this.cost_right;
+                let tofel = this.tofel_left + "-" + this.tofel_right;
+                let ssat = this.ssat_left + "-" + this.ssat_right;
+                this.$get('/school/selectSchool', {
+                    "rank": rank,
+                    "cost": cost,
+                    "tofel": tofel,
+                    "ssat": ssat
                 }).then(res => {
                     //window.console.log(res.data);
                     //接收到消息之后 返回的数据
