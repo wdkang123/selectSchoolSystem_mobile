@@ -41,17 +41,29 @@
             </div>
         </div>
 
+        <!-- 院校活动 -->
         <div class="last_activity_box" :style="{'top': last_activity_top}" v-show="switch_login">
             <!-- title -->
             <div class="title_box">
                 <span>
-                    近期活动
+                    院校活动
                 </span>
             </div>
             <!-- content -->
             <div class="content_box">
                 <div style="width: 95vw">
-                    <img style="width: 95vw" src="../assets/img/activity_1.png">
+                    <div style="width: 95vw; display: flex">
+                    <div style="flex: 1">
+                        <div class="content_box_month">FEB</div>
+                        <div class="content_box_date">27</div>
+                    </div>
+                    <div style="flex: 6; text-align: start">
+                        <div class="content_box_title">疫情要隔离，服务不缺席！澳星出国线上直播讲座！</div>
+                        <div class="content_box_time_location">时间：2020-03-01 10:30～12:00</div>
+                        <div class="content_box_time_location">地点：线上直播</div>
+                    </div>
+                    
+                </div>
                 </div>
             </div>
             <van-divider />
@@ -67,6 +79,7 @@
                 </div>
             </div>
         </div>
+
     </div>
 </template>
 
@@ -185,5 +198,24 @@
     .last_activity_box .content_box{
         width: 95vw;
         height: 10vh;
+    }
+    .content_box_month{
+        font-size: 4vw;
+        font-weight: 500;
+        color: #6c7277;
+    }
+    .content_box_date{
+        font-size: 6vw;
+        font-weight: bold;
+        color: #6c7277;
+        margin-top: -6px;
+    }
+    .content_box_title{
+        font-size: 4vw;
+        color: black;
+    }
+    .content_box_time_location{
+        font-size: 3.5vw;
+        color: #6c7277;
     }
 </style>

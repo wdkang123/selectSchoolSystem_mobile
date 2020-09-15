@@ -53,7 +53,17 @@
                            indicator-color="white">
                     <van-swipe-item>
                         <div class="interesting_img_box">
-                            <img class="interesting_img" src="../assets/img/interesting_school_1.png" />
+                            <img class="interesting_img" src="../assets/img/test.png" />
+                            <div class="interesting_title_wrapper">
+                                <div class="interesting_title_row1" style="text-align: start; margin-left: 10px">Trinity School</div>
+                                <div class="interesting_title_row">
+                                    <div style="flex:1; text-align: start; margin-left: 10px">三一学校</div>
+                                    <div style="flex:1; display: flex; justify-content: flex-end; margin-right: 10px">
+                                        <font-awesome-icon :icon="star" style="font-size: 4vw; color: #f8a362; margin-right: 3px" />
+                                        <div>No.1</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </van-swipe-item>
                     <van-swipe-item>
@@ -388,8 +398,17 @@
             </div>
             <!-- content -->
             <div class="content_box">
-                <div style="width: 95vw">
-                    <img style="width: 95vw" src="../assets/img/activity_1.png">
+                <div style="width: 95vw; display: flex">
+                    <div style="flex: 1">
+                        <div class="content_box_month">FEB</div>
+                        <div class="content_box_date">27</div>
+                    </div>
+                    <div style="flex: 6; text-align: start">
+                        <div class="content_box_title">疫情要隔离，服务不缺席！澳星出国线上直播讲座！</div>
+                        <div class="content_box_time_location">时间：2020-03-01 10:30～12:00</div>
+                        <div class="content_box_time_location">地点：线上直播</div>
+                    </div>
+                    
                 </div>
             </div>
             <van-divider />
@@ -463,11 +482,18 @@
     import UserLogin from "./UserLogin";
     import SchoolList from "./SchoolList";
 
+    import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+    import { library } from '@fortawesome/fontawesome-svg-core'
+    import { faStar } from '@fortawesome/free-solid-svg-icons'
+
+    library.add(faStar)
+
     export default {
         name: "MainView",
         components: {
             UserLogin,
-            SchoolList
+            SchoolList,
+            FontAwesomeIcon
         },
         mounted () {
             let orderWidth = document.documentElement.clientWidth;
@@ -497,6 +523,8 @@
                 //匹配到的学校的列表
                 match_box: false,
                 match_school_box: "",
+
+                star: faStar
             };
         },
         methods: {
@@ -615,9 +643,27 @@
         height: auto;
         float: left
     }
+    .interesting_title_wrapper{
+        position: absolute;
+        top: 88vw;
+        left: 5vw;
+        font-size: 5vw;
+        font-weight: bold;
+        line-height: 5vw;
+        color: white;
+    }
+    .interesting_title_row{
+        display: flex;
+        font-size: 4vw;
+        font-weight: bold;
+        line-height: 5vw;
+        color: #fff;
+        margin-top: 8px;
+        width: 70vw;
+    }
     .interesting_img{
         width: 70vw;
-        height: auto;
+        height:105vw;
     }
     .last_activity_box{
         width: 95vw;
@@ -649,6 +695,25 @@
     .last_activity_box .content_box{
         width: 95vw;
         height: 10vh;
+    }
+    .content_box_month{
+        font-size: 4vw;
+        font-weight: 500;
+        color: #6c7277;
+    }
+    .content_box_date{
+        font-size: 6vw;
+        font-weight: bold;
+        color: #6c7277;
+        margin-top: -6px;
+    }
+    .content_box_title{
+        font-size: 4vw;
+        color: black;
+    }
+    .content_box_time_location{
+        font-size: 3.5vw;
+        color: #6c7277;
     }
 
     .select_school_box{
